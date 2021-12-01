@@ -37,6 +37,43 @@ const inputElement = (type, name, label) =>{
     `;
 };
 
+
+
+const selectElement = (type, name, label, options) =>{
+    let optionsToSelect = ""; 
+    for (const opt of options) {
+        optionsToSelect += `
+        <option value="${opt}">${opt}</option>
+        `;
+    }
+
+    return `
+        <div>
+            <label>${label}</label>
+            <${type} name="${name}" id="">
+                ${optionsToSelect}
+            </${type}>
+        </div>
+    `;
+};
+
+{/* <select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select> */}
+
+
+
+
+
+
+
+
+
+
+
 /*
 const formElement = 
 "<form>" 
@@ -51,12 +88,14 @@ const formElement =
 
 const formElement = `
     <form id="form">
+        <h1>Registration</h1>
         ${inputElement('text', 'firstName', 'Keresztneved')}
         ${inputElement('file', 'profilePicture', 'Profilképed')}
         ${inputElement('email', 'personalEmail', 'Email címed')}
-        ${inputElement('radio', 'newsLetter', 'Hírlevelet szeretnél-e kapni')}
-        ${inputElement('checkbox', 'terms', 'Elfogadol a felhasználási feltételeket')}
-        <button>OK</button>
+        ${inputElement('checkbox', 'newsLetter', 'Hírlevelet szeretnél-e kapni')}
+        ${inputElement('checkbox', 'terms', 'Elfogadom a felhasználási feltételeket')}
+        ${selectElement('select', 'where', 'Hol hallottál rólunk', ['interneten','ismerőstől','egyéb'])}
+        <button id="btn">OK</button>
     </form>
 `;
 
@@ -66,15 +105,22 @@ const formElement = `
 
 const formSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target);
+    const eventTarget = event.target;
+    console.log(eventTarget);
+    eventTarget.classList.add('submitted');
+    let selectValue = eventTarget.querySelector(`select[name="where"]`).value;
+    console.log(selectValue);
 };
 
 
 
 
-const inputUpdate = (event) => {
-    document.getElementById('inputValue').innerHTML = event.target.value;
-};
+/* const inputUpdate = (event) => {
+    if (event.target.name === 'firstName') {
+        document.getElementById('inputValue').innerHTML = event.target.value;
+    }
+    console.log(event.target.closest("#form"));
+}; */
 
 
 
@@ -85,18 +131,44 @@ const inputUpdate = (event) => {
 function loadEvent() {
     const rootElement = document.getElementById('root');
     rootElement.insertAdjacentHTML('afterbegin', formElement);
-    rootElement.insertAdjacentHTML('afterbegin', `
+    /* rootElement.insertAdjacentHTML('afterbegin', `
     <div id="inputValue"></div>
-    `);
+    `); */
 
     const form = document.getElementById('form');
     form.addEventListener('submit', formSubmit);
 
 
-    const inputList = form.querySelectorAll('input');
+    /* const inputList = form.querySelectorAll('input');
     for (const input of inputList) {
         input.addEventListener('input', inputUpdate)
-    }
+    } */
 }
   
 window.addEventListener("load", loadEvent);
+
+
+
+
+
+
+
+
+
+/* 
+1. kellő távolság legyen a beviteli mezők között
+1. kellő távolság legyen a beviteli mezők között és a mezőkben
+2. elég nagy legyen az input mező
+3. label ne legyen egy sorban az inputtal     block típus
+4. label és az input össze legyen kötve (lást label for="")
+5. minden képernyőméreten ugyanúgy használható legyen
+6.rendezett legyen legyen egy vonalban
+7. lehessen tabolni (ha formban van benne akkor lehet)
+8. logikus sorrend legyen
+9. aktuális input mező kiemelkedjen
+10. gomb legyen hangsúlyos
+11. legyen megn 
+valid
+required
+kontraszt
+*/
