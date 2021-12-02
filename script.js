@@ -97,11 +97,13 @@ const anotherFormFields = [
 
 const formFields = [
     {type: "file", name: "profilePicture", label: "Profilképed"},
-    {type: "text", name: "firstName", label: "Keresztneved"},
-    {type: "email", name: "personalEmail", label: "Email címed"},
-    {type: "password", name: "password", label: "Jelszó"},
-    {type: "checkbox", name: "newsLetter", label: "Hírlevelet szeretnél-e kapni"},
-    {type: "checkbox", name: "terms", label: "Elfogadom a felhasználási feltételeket"}
+    {type: "text", name: "lastName", label: "Vezetékneved?"},
+    {type: "text", name: "firstName", label: "Keresztneved?"},
+    {type: "email", name: "personalEmail", label: "Email címed?"},
+    {type: "password", name: "password", label: "Jelszavad?"},
+    {type: "checkbox", name: "newsLetter", label: "Hírlevelet szeretnél-e kapni?"},
+    {type: "checkbox", name: "terms", label: "Elfogadom a felhasználási feltételeket!"}
+    
 ];
 
 const formElement = (ffs, id) => {
@@ -113,7 +115,7 @@ const formElement = (ffs, id) => {
     <form id=${id}>
         <div class="reg"><h1>Registration</h1></div>
         ${fieldsHTML}
-        ${selectElement('select', 'where', 'Hol hallottál rólunk', ['interneten','ismerőstől','egyéb'])}
+        ${selectElement('select', 'where', 'Hol hallottál rólunk?', ['interneten','ismerőstől','egyéb'])}
         <button id="btn">OK</button>
     </form>
     `;
@@ -143,15 +145,22 @@ const inputUpdate = (event) => {
         document.getElementById('inputValue').innerHTML = event.target.value;
     }
     if (event.target.getAttribute("name") === 'profilePicture') {
-        //document.getElementById('inputValue').innerHTML = event.target.value;
         console.log(event.target.files[0]);
-
-        const image = URL.createObjectURL(event.target.files[0]);
-        document.querySelector('#form div.file').insertAdjacentHTML('afterbegin', `
-        <img src="${image}">
-        `);
+        if (document.querySelector('#form div.file img')) {
+            document.querySelector('#form div.file img').remove();
+            const image = URL.createObjectURL(event.target.files[0]);
+            document.querySelector('#form div.file').insertAdjacentHTML('afterbegin', `
+            <img src="${image}">
+            `);
+            document.querySelector('#form div.file label').style.display = "none";
+        }else {
+            const image = URL.createObjectURL(event.target.files[0]);
+            document.querySelector('#form div.file').insertAdjacentHTML('afterbegin', `
+            <img src="${image}">
+            `);
+            document.querySelector('#form div.file label').style.display = "none";
+        }
     }
-    //console.log(event.target.closest("#form"));
 };
 
 

@@ -45,24 +45,18 @@ body {
 #root {
   width: 50vw;
   min-height: 97vh;
-  width: 700px;
+  width: 620px;
   margin: 50px auto;
-  font-family: 'Merriweather', serif;
+  font-family: sans-serif;
 }
 #form {
   width: 100%;
   border-radius: 10px;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(231, 231, 231);
   box-shadow: 30px 30px 30px black;
   overflow: hidden;
 }
-#form2 {
-  width: 100%;
-  border-radius: 10px;
-  background-color: rgb(243, 243, 243);
-  box-shadow: 30px 30px 30px black;
-  overflow: hidden;
-}
+
 
 
 
@@ -76,53 +70,68 @@ body {
     padding: 30px 0;
     text-align: center;
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
     color: white;
   }
 }
 
 
-/* #form .file {
-  width: 80%;
-  margin: 30px auto;
 
-  label{
-    display: block;
-    margin-left: 190px;
-    padding: 80px 25px;
+#form div.file {
+  position: relative;
+  height: 180px;
+  margin-top: 30px;
+  img{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
     width: 200px;
-    height: 200px;
-    font-size: 1.6rem;
+    height: 180px;
+  }
+  
+  label{
+    position: absolute;
+    padding-top: 65px;
+    left:50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 180px;
+    display: block;
+    text-align:center;
+    font-size: 1.5rem;
+    border: 5px dashed gray;
+    border-radius: 8px;
     font-weight: 600;
-    border: 3px dashed black;
-    border-radius: 10px;
     color: rgb(107, 107, 107);
-    z-index: 10;
+  } 
+  input[type="file"]{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 99;
+    cursor: pointer;
   }
-
-  input[type=file]{
-    display: none;
-  }
-} */
-
+}
 
 
 
 #form .text {
   width: 80%;
   margin: 30px auto;
-
   label{
     display: none;
   }
-
   input[type=text]{
 
     width: 100%;
     padding: 10px 10px 10px 10px;
     outline: none;
     border-style: hidden;
+    border-radius: 8px;
     font-size: 1.5rem;
     font-weight: 600;
     background-color: white;
@@ -134,6 +143,7 @@ body {
     }
     &::placeholder { 
       color: rgb(150, 149, 149);
+      font-weight: 300;
     }
   }
 }
@@ -142,18 +152,15 @@ body {
 #form .email {
   width: 80%;
   margin: 30px auto;
-
   label{
     display: none;
   }
-
   input[type=email]{
-
     width: 100%;
     padding: 10px 10px 10px 10px;
     outline: none;
     border-style: hidden;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1.5rem;
     font-weight: 600;
     color: rgb(88, 88, 88);
@@ -166,6 +173,7 @@ body {
     }
     &::placeholder { 
       color: rgb(150, 149, 149);
+      font-weight: 300;
     }
   }
 }
@@ -175,18 +183,16 @@ body {
 #form .password {
   width: 80%;
   margin: 30px auto;
-
   label{
     display: none;
   }
-
   input[type=password]{
     margin: 0;
     width: 100%;
     padding: 10px 10px 10px 10px;
     outline: none;
     border-style: hidden;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1.5rem;
     font-weight: 600;
     color: rgb(88, 88, 88);
@@ -199,6 +205,7 @@ body {
     }
     &::placeholder { 
       color: rgb(150, 149, 149);
+      font-weight: 300;
     }
   }
 }
@@ -208,22 +215,19 @@ body {
 #form .checkbox {
   width: 80%;
   margin: 30px auto;
-
   label{
     display: inline-block;
     margin-left: 20px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: rgb(107, 107, 107);
   }
-
   input[type=checkbox]{
 
     width: 28px;
     height: 18px;
     display: inline-block;
-    background-color: white; 
-    
+    background-color: white;     
   }
 }
 
@@ -231,23 +235,20 @@ body {
 #form .select {
   width: 80%;
   margin: 30px auto;
-
   label{
     display: inline-block;
     padding-left: 20px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: rgb(107, 107, 107);
   }
-
   select{
-
     width: 178px;
-    height: 32px;
+    height: 35px;
     background-color: white;
     padding-left: 23px;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 400;
     color: rgb(107, 107, 107);
     border: none;
   }
@@ -279,72 +280,6 @@ body {
 
 
 
-
-/* required
-<img />
-reqiured="required"
-reqiured=""
-reqiured
-Richárd Atom14:49
-createInputElement
-updateInputElement
-Richárd Atom14:50
-{
-  updateType: "race",
-  updateValue: "Ork"
-}
-select input event
-updateDivElement({
-  updateType: "race",
-  updateValue: "Ork"
-})
-Richárd Atom14:51
-CRUD */
-
-
-
-#form div.file {
-  position: relative;
-  height: 180px;
-  background-color: cadetblue;
-  img{
-    position: absolute;
-    left:50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 180px;
-  }
-
-  &::after {
-    display: block;
-    text-align:center;
-    content: "Húzd ide a file-t, vagy kattints";
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-  }
-
-  label{
-    padding-top: 60px;
-    display: block;
-    text-align:center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    
-  } 
-
-  input[type="file"]{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 99;
-    cursor: pointer;
-  }
-}
 
 
 /* 
