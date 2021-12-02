@@ -92,6 +92,7 @@ const formElement = `
         ${inputElement('file', 'profilePicture', 'Profilképed')}
         ${inputElement('text', 'firstName', 'Keresztneved')}
         ${inputElement('email', 'personalEmail', 'Email címed')}
+        ${inputElement('password', 'password', 'Jelszó')}
         ${inputElement('checkbox', 'newsLetter', 'Hírlevelet szeretnél-e kapni')}
         ${inputElement('checkbox', 'terms', 'Elfogadom a felhasználási feltételeket')}
         ${selectElement('select', 'where', 'Hol hallottál rólunk', ['interneten','ismerőstől','egyéb'])}

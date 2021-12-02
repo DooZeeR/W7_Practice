@@ -80,9 +80,16 @@ body {
   width: 80%;
   margin: 30px auto;
 
+  label{
+    margin: 90px auto;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(107, 107, 107);
+  }
+
   input[type=file]{
-    width: 100px;
-    height: 80px;
+    width: 180px;
+    height: 200px;
     padding: 10px 10px 10px 10px;
     outline: none;
     border-style: hidden;
@@ -100,11 +107,7 @@ body {
   margin: 30px auto;
 
   label{
-    margin-bottom: 8px;
     display: none;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: rgb(107, 107, 107);
   }
 
   input[type=text]{
@@ -113,11 +116,17 @@ body {
     padding: 10px 10px 10px 10px;
     outline: none;
     border-style: hidden;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     background-color: white;
     &:focus {
-      box-shadow: 0 0 8px rgb(175, 175, 175); 
+      box-shadow: 0 0 8px rgb(175, 175, 175);
+      &::placeholder {
+        color: transparent;
+      } 
+    }
+    &::placeholder { 
+      color: rgb(150, 149, 149);
     }
   }
 }
@@ -128,11 +137,7 @@ body {
   margin: 30px auto;
 
   label{
-    margin-bottom: 8px;
     display: none;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: rgb(158, 156, 156);
   }
 
   input[type=email]{
@@ -148,79 +153,101 @@ body {
     background-color: white;
     &:focus {
       box-shadow: 0 0 8px rgb(179, 178, 178); 
+      &::placeholder {
+        color: transparent;
+      }
+    }
+    &::placeholder { 
+      color: rgb(150, 149, 149);
     }
   }
 }
 
 
 
-
-
-/* .parent {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(6, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 10px;
-}
-
-.div1 { grid-area: 1 / 1 / 2 / 3; }
-.div2 { grid-area: 2 / 1 / 3 / 2; }
-.div3 { grid-area: 3 / 1 / 4 / 2; }
-.div4 { grid-area: 2 / 2 / 4 / 3; }
-.div5 { grid-area: 4 / 1 / 5 / 3; }
-.div6 { grid-area: 5 / 1 / 6 / 3; }
-.div7 { grid-area: 6 / 1 / 7 / 3; }
-
-  <div class="parent">
-<div class="div1"> </div>
-<div class="div2"> </div>
-<div class="div3"> </div>
-<div class="div4"> </div>
-<div class="div5"> </div>
-<div class="div6"> </div>
-<div class="div7"> </div>
-</div> */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#form div {
+#form #password {
   width: 80%;
   margin: 30px auto;
+
+  label{
+    display: none;
+  }
+
+  input[type=password]{
+    margin: 0;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    outline: none;
+    border-style: hidden;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(88, 88, 88);
+    background-color: white;
+    &:focus {
+      box-shadow: 0 0 8px rgb(179, 178, 178); 
+    }
+    &::placeholder { 
+      color: rgb(150, 149, 149);
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
 }
 
 
 
+#form #checkbox {
+  width: 80%;
+  margin: 30px auto;
 
+  label{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(107, 107, 107);
+  }
 
+  input[type=checkbox]{
 
-
-
-#form div input[type=checkbox]{
-  width: 50px;
-  padding: 10px 10px 10px 10px;
-  background-color: white;
+    width: 28px;
+    height: 18px;
+    display: inline-block;
+    background-color: white; 
+    
+  }
 }
+
+
+#form #select {
+  width: 80%;
+  margin: 30px auto;
+
+  label{
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(107, 107, 107);
+  }
+
+  select{
+
+    width: 178px;
+    height: 32px;
+    background-color: white;
+    padding-left: 23px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(107, 107, 107);
+    border: none;
+  }
+}
+
+
+
 
 
 #btn {
@@ -234,6 +261,8 @@ grid-row-gap: 10px;
   font-size: 2rem;
   font-weight: 600;
   color: white;
-  background: rgb(25,172,17);
-  background: linear-gradient(90deg, rgba(25,172,17,1) 0%, rgba(9,126,2,1) 50%, rgba(25,172,17,1) 100%);
+  background-color: rgb(4, 136, 96);
+  &:hover{
+    background-color: rgb(27, 177, 132);
+  }
 }
