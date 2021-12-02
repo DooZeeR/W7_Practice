@@ -56,11 +56,18 @@ body {
   box-shadow: 30px 30px 30px black;
   overflow: hidden;
 }
+#form2 {
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 30px 30px 30px black;
+  overflow: hidden;
+}
 
 
 
 
-#form #reg {
+#form .reg {
   width: 100%;
   margin: 0;
   background-color: rgb(54, 54, 54);
@@ -76,19 +83,19 @@ body {
 }
 
 
-#form #file {
+/* #form .file {
   width: 80%;
   margin: 30px auto;
 
   label{
     display: block;
-    margin-left: 200px;
-    padding: 80px 10px;
-    width: 170px;
+    margin-left: 190px;
+    padding: 80px 25px;
+    width: 200px;
     height: 200px;
     font-size: 1.6rem;
     font-weight: 600;
-    border: 2px dashed black;
+    border: 3px dashed black;
     border-radius: 10px;
     color: rgb(107, 107, 107);
     z-index: 10;
@@ -97,12 +104,12 @@ body {
   input[type=file]{
     display: none;
   }
-}
+} */
 
 
 
 
-#form #text {
+#form .text {
   width: 80%;
   margin: 30px auto;
 
@@ -132,7 +139,7 @@ body {
 }
 
 
-#form #email {
+#form .email {
   width: 80%;
   margin: 30px auto;
 
@@ -165,7 +172,7 @@ body {
 
 
 
-#form #password {
+#form .password {
   width: 80%;
   margin: 30px auto;
 
@@ -198,7 +205,7 @@ body {
 
 
 
-#form #checkbox {
+#form .checkbox {
   width: 80%;
   margin: 30px auto;
 
@@ -221,7 +228,7 @@ body {
 }
 
 
-#form #select {
+#form .select {
   width: 80%;
   margin: 30px auto;
 
@@ -254,15 +261,101 @@ body {
   display: block;
   margin: 50px auto;
   border:none;
-  width: 200px;
+  width: 250px;
   height: 50px;
   border-radius: 30px;
-  box-shadow: 5px 5px 15px rgb(78, 78, 78);
   font-size: 2rem;
   font-weight: 600;
   color: white;
   background-color: rgb(4, 136, 96);
   &:hover{
-    background-color: rgb(27, 177, 132);
+    background-color: rgb(26, 153, 115);
   }
 }
+
+
+
+
+
+
+
+
+/* required
+<img />
+reqiured="required"
+reqiured=""
+reqiured
+Richárd Atom14:49
+createInputElement
+updateInputElement
+Richárd Atom14:50
+{
+  updateType: "race",
+  updateValue: "Ork"
+}
+select input event
+updateDivElement({
+  updateType: "race",
+  updateValue: "Ork"
+})
+Richárd Atom14:51
+CRUD */
+
+
+
+#form div.file {
+  position: relative;
+  height: 180px;
+  background-color: cadetblue;
+  img{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 180px;
+  }
+
+  &::after {
+    display: block;
+    text-align:center;
+    content: "Húzd ide a file-t, vagy kattints";
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+  }
+
+  label{
+    padding-top: 60px;
+    display: block;
+    text-align:center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    
+  } 
+
+  input[type="file"]{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 99;
+    cursor: pointer;
+  }
+}
+
+
+/* 
+CRUD
+Create
+Read
+Update
+Delete
+Richárd Atom14:53
+handleDivElement
+Richárd Atom15:27
+URL.createObjectURL(event.target.files[0])
+Richárd Atom15:29
+https://developer.mozilla.org/en-US/docs/Web/API/FileReader */

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -58,13 +59,22 @@ body {
   overflow: hidden;
 }
 
-#form #reg {
+#form2 {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 30px 30px 30px black;
+          box-shadow: 30px 30px 30px black;
+  overflow: hidden;
+}
+
+#form .reg {
   width: 100%;
   margin: 0;
   background-color: #363636;
 }
 
-#form #reg h1 {
+#form .reg h1 {
   margin: 0 auto;
   padding: 30px 0;
   text-align: center;
@@ -74,39 +84,38 @@ body {
   color: white;
 }
 
-#form #file {
+/* #form .file {
+  width: 80%;
+  margin: 30px auto;
+
+  label{
+    display: block;
+    margin-left: 190px;
+    padding: 80px 25px;
+    width: 200px;
+    height: 200px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: 3px dashed black;
+    border-radius: 10px;
+    color: rgb(107, 107, 107);
+    z-index: 10;
+  }
+
+  input[type=file]{
+    display: none;
+  }
+} */
+#form .text {
   width: 80%;
   margin: 30px auto;
 }
 
-#form #file label {
-  display: block;
-  margin-left: 200px;
-  padding: 80px 10px;
-  width: 170px;
-  height: 200px;
-  font-size: 1.6rem;
-  font-weight: 600;
-  border: 2px dashed black;
-  border-radius: 10px;
-  color: #6b6b6b;
-  z-index: 10;
-}
-
-#form #file input[type=file] {
+#form .text label {
   display: none;
 }
 
-#form #text {
-  width: 80%;
-  margin: 30px auto;
-}
-
-#form #text label {
-  display: none;
-}
-
-#form #text input[type=text] {
+#form .text input[type=text] {
   width: 100%;
   padding: 10px 10px 10px 10px;
   outline: none;
@@ -116,53 +125,53 @@ body {
   background-color: white;
 }
 
-#form #text input[type=text]:focus {
+#form .text input[type=text]:focus {
   -webkit-box-shadow: 0 0 8px #afafaf;
           box-shadow: 0 0 8px #afafaf;
 }
 
-#form #text input[type=text]:focus::-webkit-input-placeholder {
+#form .text input[type=text]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-#form #text input[type=text]:focus:-ms-input-placeholder {
+#form .text input[type=text]:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-#form #text input[type=text]:focus::-ms-input-placeholder {
+#form .text input[type=text]:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-#form #text input[type=text]:focus::placeholder {
+#form .text input[type=text]:focus::placeholder {
   color: transparent;
 }
 
-#form #text input[type=text]::-webkit-input-placeholder {
+#form .text input[type=text]::-webkit-input-placeholder {
   color: #969595;
 }
 
-#form #text input[type=text]:-ms-input-placeholder {
+#form .text input[type=text]:-ms-input-placeholder {
   color: #969595;
 }
 
-#form #text input[type=text]::-ms-input-placeholder {
+#form .text input[type=text]::-ms-input-placeholder {
   color: #969595;
 }
 
-#form #text input[type=text]::placeholder {
+#form .text input[type=text]::placeholder {
   color: #969595;
 }
 
-#form #email {
+#form .email {
   width: 80%;
   margin: 30px auto;
 }
 
-#form #email label {
+#form .email label {
   display: none;
 }
 
-#form #email input[type=email] {
+#form .email input[type=email] {
   width: 100%;
   padding: 10px 10px 10px 10px;
   outline: none;
@@ -174,53 +183,53 @@ body {
   background-color: white;
 }
 
-#form #email input[type=email]:focus {
+#form .email input[type=email]:focus {
   -webkit-box-shadow: 0 0 8px #b3b2b2;
           box-shadow: 0 0 8px #b3b2b2;
 }
 
-#form #email input[type=email]:focus::-webkit-input-placeholder {
+#form .email input[type=email]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-#form #email input[type=email]:focus:-ms-input-placeholder {
+#form .email input[type=email]:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-#form #email input[type=email]:focus::-ms-input-placeholder {
+#form .email input[type=email]:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-#form #email input[type=email]:focus::placeholder {
+#form .email input[type=email]:focus::placeholder {
   color: transparent;
 }
 
-#form #email input[type=email]::-webkit-input-placeholder {
+#form .email input[type=email]::-webkit-input-placeholder {
   color: #969595;
 }
 
-#form #email input[type=email]:-ms-input-placeholder {
+#form .email input[type=email]:-ms-input-placeholder {
   color: #969595;
 }
 
-#form #email input[type=email]::-ms-input-placeholder {
+#form .email input[type=email]::-ms-input-placeholder {
   color: #969595;
 }
 
-#form #email input[type=email]::placeholder {
+#form .email input[type=email]::placeholder {
   color: #969595;
 }
 
-#form #password {
+#form .password {
   width: 80%;
   margin: 30px auto;
 }
 
-#form #password label {
+#form .password label {
   display: none;
 }
 
-#form #password input[type=password] {
+#form .password input[type=password] {
   margin: 0;
   width: 100%;
   padding: 10px 10px 10px 10px;
@@ -233,49 +242,49 @@ body {
   background-color: white;
 }
 
-#form #password input[type=password]:focus {
+#form .password input[type=password]:focus {
   -webkit-box-shadow: 0 0 8px #b3b2b2;
           box-shadow: 0 0 8px #b3b2b2;
 }
 
-#form #password input[type=password]:focus::-webkit-input-placeholder {
+#form .password input[type=password]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-#form #password input[type=password]:focus:-ms-input-placeholder {
+#form .password input[type=password]:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-#form #password input[type=password]:focus::-ms-input-placeholder {
+#form .password input[type=password]:focus::-ms-input-placeholder {
   color: transparent;
 }
 
-#form #password input[type=password]:focus::placeholder {
+#form .password input[type=password]:focus::placeholder {
   color: transparent;
 }
 
-#form #password input[type=password]::-webkit-input-placeholder {
+#form .password input[type=password]::-webkit-input-placeholder {
   color: #969595;
 }
 
-#form #password input[type=password]:-ms-input-placeholder {
+#form .password input[type=password]:-ms-input-placeholder {
   color: #969595;
 }
 
-#form #password input[type=password]::-ms-input-placeholder {
+#form .password input[type=password]::-ms-input-placeholder {
   color: #969595;
 }
 
-#form #password input[type=password]::placeholder {
+#form .password input[type=password]::placeholder {
   color: #969595;
 }
 
-#form #checkbox {
+#form .checkbox {
   width: 80%;
   margin: 30px auto;
 }
 
-#form #checkbox label {
+#form .checkbox label {
   display: inline-block;
   margin-left: 20px;
   font-size: 1.6rem;
@@ -283,19 +292,19 @@ body {
   color: #6b6b6b;
 }
 
-#form #checkbox input[type=checkbox] {
+#form .checkbox input[type=checkbox] {
   width: 28px;
   height: 18px;
   display: inline-block;
   background-color: white;
 }
 
-#form #select {
+#form .select {
   width: 80%;
   margin: 30px auto;
 }
 
-#form #select label {
+#form .select label {
   display: inline-block;
   padding-left: 20px;
   font-size: 1.6rem;
@@ -303,7 +312,7 @@ body {
   color: #6b6b6b;
 }
 
-#form #select select {
+#form .select select {
   width: 178px;
   height: 32px;
   background-color: white;
@@ -318,11 +327,9 @@ body {
   display: block;
   margin: 50px auto;
   border: none;
-  width: 200px;
+  width: 250px;
   height: 50px;
   border-radius: 30px;
-  -webkit-box-shadow: 5px 5px 15px #4e4e4e;
-          box-shadow: 5px 5px 15px #4e4e4e;
   font-size: 2rem;
   font-weight: 600;
   color: white;
@@ -330,6 +337,83 @@ body {
 }
 
 #btn:hover {
-  background-color: #1bb184;
+  background-color: #1a9973;
 }
+
+/* required
+<img />
+reqiured="required"
+reqiured=""
+reqiured
+Richárd Atom14:49
+createInputElement
+updateInputElement
+Richárd Atom14:50
+{
+  updateType: "race",
+  updateValue: "Ork"
+}
+select input event
+updateDivElement({
+  updateType: "race",
+  updateValue: "Ork"
+})
+Richárd Atom14:51
+CRUD */
+#form div.file {
+  position: relative;
+  height: 180px;
+  background-color: cadetblue;
+}
+
+#form div.file img {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 200px;
+  height: 180px;
+}
+
+#form div.file::after {
+  display: block;
+  text-align: center;
+  content: "Húzd ide a file-t, vagy kattints";
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+#form div.file label {
+  padding-top: 60px;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+#form div.file input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+
+/* 
+CRUD
+Create
+Read
+Update
+Delete
+Richárd Atom14:53
+handleDivElement
+Richárd Atom15:27
+URL.createObjectURL(event.target.files[0])
+Richárd Atom15:29
+https://developer.mozilla.org/en-US/docs/Web/API/FileReader */
 /*# sourceMappingURL=style.css.map */
