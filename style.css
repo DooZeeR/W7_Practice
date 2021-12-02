@@ -44,8 +44,7 @@ body {
 #root {
   width: 50vw;
   min-height: 97vh;
-  min-width: 400px;
-  max-width: 700px;
+  width: 700px;
   margin: 50px auto;
   font-family: 'Merriweather', serif;
 }
@@ -81,11 +80,15 @@ body {
 }
 
 #form #file label {
+  display: block;
   margin-left: 200px;
+  padding: 80px 10px;
   width: 170px;
   height: 200px;
   font-size: 1.6rem;
   font-weight: 600;
+  border: 2px dashed black;
+  border-radius: 10px;
   color: #6b6b6b;
   z-index: 10;
 }
