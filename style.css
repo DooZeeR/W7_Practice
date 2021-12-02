@@ -35,63 +35,153 @@ textarea {
   resize: none;
 }
 
-/* button, 
-input, 
-textarea, 
-select{
-  appearance: none !important; 
-  -webkit-appearance: none !important; 
-  border-radius: 0;
-} */
 body {
   background: #60d479;
-  background: -webkit-gradient(linear, left bottom, left top, from(#60d479), to(#7da4f1));
-  background: linear-gradient(0deg, #60d479 0%, #7da4f1 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#03b68f), to(#7da4f1));
+  background: linear-gradient(0deg, #03b68f 0%, #7da4f1 100%);
 }
 
 #root {
   width: 50vw;
+  min-width: 400px;
+  max-width: 700px;
   margin: 50px auto;
   font-family: 'Merriweather', serif;
 }
 
 #form {
   width: 100%;
-  margin: 50px auto;
-  border: 1px solid black;
   border-radius: 10px;
-  background-color: #f1f1f1;
-  -webkit-box-shadow: 10px 10px 30px black;
-          box-shadow: 10px 10px 30px black;
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 30px 30px 30px black;
+          box-shadow: 30px 30px 30px black;
+  overflow: hidden;
 }
 
-#form h1 {
-  margin: 50px auto;
+#form #reg {
+  width: 100%;
+  margin: 0;
+  background-color: #363636;
+}
+
+#form #reg h1 {
+  margin: 0 auto;
+  padding: 30px 0;
   text-align: center;
   font-size: 3rem;
   font-weight: 900;
+  font-style: italic;
+  color: white;
 }
 
-#form div {
+#form #file {
   width: 80%;
-  margin: 50px auto;
+  margin: 30px auto;
+}
+
+#form #file input[type=file] {
+  width: 100px;
+  height: 80px;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  border-style: hidden;
+  font-size: 1.2rem;
+  font-weight: 600;
   background-color: white;
 }
 
-#form div label {
-  display: block;
-  margin: 10px;
-  font-size: 1.7rem;
+#form #text {
+  width: 80%;
+  margin: 30px auto;
+}
+
+#form #text label {
+  margin-bottom: 8px;
+  display: none;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #6b6b6b;
 }
 
-#form div input {
-  margin: 10px;
-  border: 1px solid black;
-  height: 2rem;
-  border: 1px solid grey;
-  border-radius: 15px;
+#form #text input[type=text] {
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  border-style: hidden;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: white;
+}
+
+#form #text input[type=text]:focus {
+  -webkit-box-shadow: 0 0 8px #afafaf;
+          box-shadow: 0 0 8px #afafaf;
+}
+
+#form #email {
+  width: 80%;
+  margin: 30px auto;
+}
+
+#form #email label {
+  margin-bottom: 8px;
+  display: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #9e9c9c;
+}
+
+#form #email input[type=email] {
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+  border-style: hidden;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #585858;
+  background-color: white;
+}
+
+#form #email input[type=email]:focus {
+  -webkit-box-shadow: 0 0 8px #b3b2b2;
+          box-shadow: 0 0 8px #b3b2b2;
+}
+
+/* .parent {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(6, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 3; }
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div3 { grid-area: 3 / 1 / 4 / 2; }
+.div4 { grid-area: 2 / 2 / 4 / 3; }
+.div5 { grid-area: 4 / 1 / 5 / 3; }
+.div6 { grid-area: 5 / 1 / 6 / 3; }
+.div7 { grid-area: 6 / 1 / 7 / 3; }
+
+  <div class="parent">
+<div class="div1"> </div>
+<div class="div2"> </div>
+<div class="div3"> </div>
+<div class="div4"> </div>
+<div class="div5"> </div>
+<div class="div6"> </div>
+<div class="div7"> </div>
+</div> */
+#form div {
+  width: 80%;
+  margin: 30px auto;
+}
+
+#form div input[type=checkbox] {
+  width: 50px;
+  padding: 10px 10px 10px 10px;
+  background-color: white;
 }
 
 #btn {
@@ -99,13 +189,15 @@ body {
   margin: 50px auto;
   border: none;
   width: 200px;
-  height: 65px;
+  height: 50px;
   border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 15px #4e4e4e;
+          box-shadow: 5px 5px 15px #4e4e4e;
   font-size: 2rem;
   font-weight: 600;
   color: white;
-  background: #1183b6;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(17, 131, 182, 0.413603)), to(#03914f));
-  background: linear-gradient(90deg, rgba(17, 131, 182, 0.413603) 50%, #03914f 100%);
+  background: #19ac11;
+  background: -webkit-gradient(linear, left top, right top, from(#19ac11), color-stop(50%, #097e02), to(#19ac11));
+  background: linear-gradient(90deg, #19ac11 0%, #097e02 50%, #19ac11 100%);
 }
 /*# sourceMappingURL=style.css.map */

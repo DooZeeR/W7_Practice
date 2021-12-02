@@ -30,9 +30,9 @@ functionName(1,2);
 
 const inputElement = (type, name, label) =>{
     return `
-        <div>
-            <label>${label}</label>
-            <input type="${type}" name="${name}" id="">
+        <div id="${type}">
+        <input type="${type}" name="${name}" id="${name}" placeholder="${label}" title="${label}">
+        <label for="${name}">${label}</label>
         </div>
     `;
 };
@@ -48,11 +48,11 @@ const selectElement = (type, name, label, options) =>{
     }
 
     return `
-        <div>
-            <label>${label}</label>
-            <${type} name="${name}" id="">
-                ${optionsToSelect}
-            </${type}>
+        <div id="${type}">
+        <${type} name="${name}" id="">
+        ${optionsToSelect}
+        </${type}>
+        <label>${label}</label>
         </div>
     `;
 };
@@ -88,9 +88,9 @@ const formElement =
 
 const formElement = `
     <form id="form">
-        <h1>Registration</h1>
-        ${inputElement('text', 'firstName', 'Keresztneved')}
+        <div id="reg"><h1>Registration</h1></div>
         ${inputElement('file', 'profilePicture', 'Profilképed')}
+        ${inputElement('text', 'firstName', 'Keresztneved')}
         ${inputElement('email', 'personalEmail', 'Email címed')}
         ${inputElement('checkbox', 'newsLetter', 'Hírlevelet szeretnél-e kapni')}
         ${inputElement('checkbox', 'terms', 'Elfogadom a felhasználási feltételeket')}
