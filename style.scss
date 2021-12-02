@@ -183,12 +183,12 @@ body {
     background-color: white;
     &:focus {
       box-shadow: 0 0 8px rgb(179, 178, 178); 
-    }
-    &::placeholder { 
-      color: rgb(150, 149, 149);
       &::placeholder {
         color: transparent;
       }
+    }
+    &::placeholder { 
+      color: rgb(150, 149, 149);
     }
   }
 }

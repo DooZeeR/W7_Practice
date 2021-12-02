@@ -235,6 +235,22 @@ body {
           box-shadow: 0 0 8px #b3b2b2;
 }
 
+#form #password input[type=password]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+#form #password input[type=password]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+#form #password input[type=password]:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+#form #password input[type=password]:focus::placeholder {
+  color: transparent;
+}
+
 #form #password input[type=password]::-webkit-input-placeholder {
   color: #969595;
 }
@@ -249,22 +265,6 @@ body {
 
 #form #password input[type=password]::placeholder {
   color: #969595;
-}
-
-#form #password input[type=password]::-webkit-input-placeholder::placeholder {
-  color: transparent;
-}
-
-#form #password input[type=password]:-ms-input-placeholder::placeholder {
-  color: transparent;
-}
-
-#form #password input[type=password]::-ms-input-placeholder::placeholder {
-  color: transparent;
-}
-
-#form #password input[type=password]::placeholder::placeholder {
-  color: transparent;
 }
 
 #form #checkbox {
