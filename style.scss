@@ -81,21 +81,16 @@ body {
   margin: 30px auto;
 
   label{
-    margin: 90px auto;
+    width: 170px;
+    height: 200px;
     font-size: 1.6rem;
     font-weight: 600;
     color: rgb(107, 107, 107);
+    z-index: 10;
   }
 
   input[type=file]{
-    width: 180px;
-    height: 200px;
-    padding: 10px 10px 10px 10px;
-    outline: none;
-    border-style: hidden;
-    font-size: 1.2rem;
-    font-weight: 600;
-    background-color: white;
+    display: none;
   }
 }
 
